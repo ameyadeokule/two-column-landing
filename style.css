@@ -87,6 +87,7 @@ nav ul a {
 /* Form Section */
 form {
 	display: flex;
+	position: relative;
 }
 
 input {
@@ -100,6 +101,24 @@ input {
 
 input::placeholder {
 	color: hsl(0, 0%, 75%);
+}
+
+input.error {
+	border-color: hsl(354, 100%, 66%);
+}
+
+input.error::placeholder {
+	color: hsl(354, 100%, 66%);
+}
+
+form small {
+	visibility: hidden;
+	position: absolute;
+	top: 52px;
+	left: 0;
+	color: hsl(354, 100%, 66%);
+	font-style: italic;
+	z-index: 100;
 }
 
 button {
